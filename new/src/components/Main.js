@@ -3,11 +3,17 @@ import Section from "./Section";
 import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
+
 
 function Main() {
-  return (
+ return(
     <Container>
+      <Router>
       <Header />
+      <Routes>
+        <Route path="/">
+        <Route path="/model3">
       <Section
         title="Model 3"
         Description="Order Online For Touchless Delivery"
@@ -16,12 +22,14 @@ function Main() {
         rightbuttontext="Existing Inventory"
         SectionImage="down.png"
       />
+      </Route>
       <Section
         title="Model Y"
         Description="Order Online For Touchless Delivery"
         backgroundImg="model-y.jpg"
         leftbuttontext="Custom order"
         rightbuttontext="Existing Inventory"
+        Path="/modely"
       />
       <Section
         title="Model S"
@@ -29,6 +37,7 @@ function Main() {
         backgroundImg="model-s.jpg"
         leftbuttontext="Custom order"
         rightbuttontext="Existing Inventory"
+        Path="/models"
       />
 
       <Section
@@ -37,6 +46,7 @@ function Main() {
         backgroundImg="model-x.jpg"
         leftbuttontext="Custom order"
         rightbuttontext="Existing Inventory"
+        Path="/modelx"
       />
 
       <Section
@@ -45,6 +55,7 @@ function Main() {
         backgroundImg="solar-panel.jpg"
         leftbuttontext="Order Now"
         rightbuttontext="Learn More"
+        Path="/solarpanels"
       />
 
       <Section
@@ -53,6 +64,7 @@ function Main() {
         backgroundImg="solar-roof.jpg"
         leftbuttontext="Order Now"
         rightbuttontext="Learn More"
+        Path="/solarpanels"
       /> 
 
       <Section
@@ -60,11 +72,14 @@ function Main() {
         backgroundImg="accessories.jpg"
         leftbuttontext="Shop Now"
       />
-
+      </Route>
+      </Routes>
       <Footer />
+      </Router>
     </Container>
   );
 }
+
 const Container = styled.div`
     width= 100vw;
     height = 100vh;

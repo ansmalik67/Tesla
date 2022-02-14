@@ -1,3 +1,6 @@
+// import Section from "./Section";
+// import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Link, Route } from "react-router-dom"
 import React, { useState } from "react";
 import styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
@@ -5,6 +8,9 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, faCheckSquare, faCoffee);
+
+// import Section from "./Section";
+
 // import MenuIcon from "@mui/icons-material/Menu";
 // import ReactDOM from 'react-dom'
 
@@ -22,17 +28,18 @@ function Header() {
           height="15px"
         />
       </Image>
+         
       <CenterNavbar>
         <ul className="CenterNavbarUl">
-          <li>Model S</li>
-          <li>Model 3</li>
-          <li>Model X</li>
-          <li>Model Y</li>
-          <li>Solar Roof</li>
-          <li>Solar Panels</li>
+          <li><Link to="/modelx">Model X</Link></li>
+          <li><Link to="/model3">Model 3</Link></li> 
+          <li><Link to="/modely">Model Y</Link></li>
+          <li><Link to="/solarroof">Solar Roof</Link></li>
+          <li><Link to="/models">Model S</Link></li>
+          <li><Link to="/solarpanels">Solar Panels</Link></li>
         </ul>
       </CenterNavbar>
-
+      
       <RightNavbar>
         <ul>          
           <li className="RightNavbarUL">
@@ -54,12 +61,12 @@ function Header() {
             <Customclosed onClick={() => setBurgerStatus(false)} />
           </Closewrapper></div>
               
-          <li>Model S</li>
+          {/* <li>Model S</li>
           <li>Model 3</li>
           <li>Model X</li>
           <li>Model Y</li>
           <li>Solar Roof</li>
-          <li>Solar Panels</li>
+          <li>Solar Panels</li> */}
           <li>
             <a href="#">Existing Inventory</a>
           </li>
@@ -146,6 +153,10 @@ const CenterNavbar = styled.div`
     display: flex;
     padding: 15px;
     margin-top: -5px;
+  }
+  a {
+    color: black;
+    text-decoration: none;
   }
 `;
 const RightNavbar = styled.div`

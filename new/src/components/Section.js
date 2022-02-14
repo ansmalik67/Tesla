@@ -1,13 +1,15 @@
 import React from "react";
 import arrowimage from "../down.png";
 import styled from "styled-components";
-
 function Section(props) {
   return (
     <Wrap
+     
       className="main"
       bgimage={props.backgroundImg}
       SecImage={props.SectionImage}
+      redirect ={props.Path}
+      id="section1"
     >
       <Head>
         <div className="GroupModel">
@@ -22,6 +24,7 @@ function Section(props) {
         )}
       </Buttongroup>
       <img src={arrowimage} alt="" width="30px" height="22px" />
+      
     </Wrap>
   );
 }
