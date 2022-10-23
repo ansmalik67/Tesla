@@ -1,6 +1,6 @@
 // import Section from "./Section";
 // import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Link, Route } from "react-router-dom"
+import { Link, Route } from "react-router-dom";
 import React, { useState } from "react";
 import styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
@@ -21,46 +21,60 @@ function Header() {
       <Image>
         {/* <h1 className="tesla">TESLA</h1> */}
         <img
-          src="/images/logo.svg"
-          className="tesla"
-          alt="Ima"
-          width="100px"
-          height="15px"
+          src='/images/logo.svg'
+          className='tesla'
+          alt='Ima'
+          width='100px'
+          height='15px'
         />
       </Image>
-         
+
       <CenterNavbar>
-        <ul className="CenterNavbarUl">
-          <li><Link to="/modelx">Model X</Link></li>
-          <li><Link to="/model3">Model 3</Link></li> 
-          <li><Link to="/modely">Model Y</Link></li>
-          <li><Link to="/solarroof">Solar Roof</Link></li>
-          <li><Link to="/models">Model S</Link></li>
-          <li><Link to="/solarpanels">Solar Panels</Link></li>
+        <ul className='CenterNavbarUl'>
+          <li>
+            <Link to='/modelx'>Model X</Link>
+          </li>
+          <li>
+            <Link to='/model3'>Model 3</Link>
+          </li>
+          <li>
+            <Link to='/modely'>Model Y</Link>
+          </li>
+          <li>
+            <Link to='/solarroof'>Solar Roof</Link>
+          </li>
+          <li>
+            <Link to='/models'>Model S</Link>
+          </li>
+          <li>
+            <Link to='/solarpanels'>Solar Panels</Link>
+          </li>
         </ul>
       </CenterNavbar>
-      
+
       <RightNavbar>
-        <ul>          
-          <li className="RightNavbarUL">
-            <a href="#">Shop</a>
+        <ul>
+          <li className='RightNavbarUL'>
+            <a href='#'>Shop</a>
           </li>
-          <li className="RightNavbarUL">
-            <a href="#">Account</a>
+          <li className='RightNavbarUL'>
+            <a href='#'>Account</a>
           </li>
-          <li className="Menubar">
-            <a href="#" onClick={() => setBurgerStatus(true)}>
+          <li className='Menubar'>
+            <a href='#' onClick={() => setBurgerStatus(true)}>
               Menu
             </a>
           </li>
         </ul>
       </RightNavbar>
       <BurgerNav show={burgerStatus}>
-      <ul>
-          <div><Closewrapper>
-            <Customclosed onClick={() => setBurgerStatus(false)} />
-          </Closewrapper></div>
-              
+        <ul>
+          <div>
+            <Closewrapper>
+              <Customclosed onClick={() => setBurgerStatus(false)} />
+            </Closewrapper>
+          </div>
+
           {/* <li>Model S</li>
           <li>Model 3</li>
           <li>Model X</li>
@@ -68,49 +82,49 @@ function Header() {
           <li>Solar Roof</li>
           <li>Solar Panels</li> */}
           <li>
-            <a href="#">Existing Inventory</a>
+            <a href='#'>Existing Inventory</a>
           </li>
           <li>
-            <a href="#">Used Inventory</a>
+            <a href='#'>Used Inventory</a>
           </li>
           <li>
-            <a href="#">Trade-In</a>
+            <a href='#'>Trade-In</a>
           </li>
           <li>
-            <a href="#">Test Drive</a>
+            <a href='#'>Test Drive</a>
           </li>
           <li>
-            <a href="#">Cyber Truck</a>
+            <a href='#'>Cyber Truck</a>
           </li>
           <li>
-            <a href="#">Roadster</a>
+            <a href='#'>Roadster</a>
           </li>
           <li>
-            <a href="#">Semi</a>
+            <a href='#'>Semi</a>
           </li>
           <li>
-            <a href="#">Charging</a>
+            <a href='#'>Charging</a>
           </li>
           <li>
-            <a href="#">Powerwall</a>
+            <a href='#'>Powerwall</a>
           </li>
           <li>
-            <a href="#">Commercial Energy</a>
+            <a href='#'>Commercial Energy</a>
           </li>
           <li>
-            <a href="#">Utilities</a>
+            <a href='#'>Utilities</a>
           </li>
           <li>
-            <a href="#">Find Us</a>
+            <a href='#'>Find Us</a>
           </li>
           <li>
-            <a href="#">Support</a>
+            <a href='#'>Support</a>
           </li>
           <li>
-            <a href="#">Inverstor Relations</a>
+            <a href='#'>Inverstor Relations</a>
           </li>
           <li>
-            <a href="#">
+            <a href='#'>
               UnitedStates<small> (English)</small>
             </a>
           </li>
@@ -213,7 +227,7 @@ const BurgerNav = styled.div`
   transition: transform 0.2s ease-in;
   li {
     width: 200px;
-    height:20px;
+    height: 20px;
     list-style: none;
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
@@ -233,17 +247,17 @@ const BurgerNav = styled.div`
     height: 25px;
     margin-left: -35px;
   }
-`
+`;
 const Customclosed = styled(CloseIcon)`
   cursor: pointer;
   position: absolute;
   display: inline;
   height:40px;
   margin-top -15px;
-`
+`;
 const Closewrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-`
+`;
 
 export default Header;

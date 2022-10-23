@@ -1,81 +1,67 @@
 import React from "react";
 import Section from "./Section";
 import styled from "styled-components";
-import Header from "./Header";
-import Footer from "./Footer";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
 
 function Main() {
- return(
+  return (
     <Container>
-      <Router>
-      <Header />
-      <Routes>
-        <Route path="/">
-        <Route path="/model3">
       <Section
-        title="Model 3"
-        Description="Order Online For Touchless Delivery"
-        backgroundImg="model-3.jpg"
-        leftbuttontext="Custom order"
-        rightbuttontext="Existing Inventory"
-        SectionImage="down.png"
-      />
-      </Route>
-      <Section
-        title="Model Y"
-        Description="Order Online For Touchless Delivery"
-        backgroundImg="model-y.jpg"
-        leftbuttontext="Custom order"
-        rightbuttontext="Existing Inventory"
-        Path="/modely"
+        title='Model 3'
+        Description='Order Online For Touchless Delivery'
+        backgroundImg='model-3.jpg'
+        leftbuttontext='Custom order'
+        rightbuttontext='Existing Inventory'
+        SectionImage='down.png'
       />
       <Section
-        title="Model S"
-        Description="Order Online For Touchless Delivery"
-        backgroundImg="model-s.jpg"
-        leftbuttontext="Custom order"
-        rightbuttontext="Existing Inventory"
-        Path="/models"
+        title='Model Y'
+        Description='Order Online For Touchless Delivery'
+        backgroundImg='model-y.jpg'
+        leftbuttontext='Custom order'
+        rightbuttontext='Existing Inventory'
+        Path='/modely'
+      />
+      <Section
+        title='Model S'
+        Description='Order Online For Touchless Delivery'
+        backgroundImg='model-s.jpg'
+        leftbuttontext='Custom order'
+        rightbuttontext='Existing Inventory'
+        Path='/models'
       />
 
       <Section
-        title="Model X"
-        Description="Order Online For Touchless Delivery"
-        backgroundImg="model-x.jpg"
-        leftbuttontext="Custom order"
-        rightbuttontext="Existing Inventory"
-        Path="/modelx"
+        title='Model X'
+        Description='Order Online For Touchless Delivery'
+        backgroundImg='model-x.jpg'
+        leftbuttontext='Custom order'
+        rightbuttontext='Existing Inventory'
+        Path='/modelx'
       />
 
       <Section
-        title="Solar Panels"
-        Description="Lowest Cost Solar Panels in America"
-        backgroundImg="solar-panel.jpg"
-        leftbuttontext="Order Now"
-        rightbuttontext="Learn More"
-        Path="/solarpanels"
+        title='Solar Panels'
+        Description='Lowest Cost Solar Panels in America'
+        backgroundImg='solar-panel.jpg'
+        leftbuttontext='Order Now'
+        rightbuttontext='Learn More'
+        Path='/solarpanels'
       />
 
       <Section
-        title="Solar Roof"
-        Description="Produce Clean Energy From your Roof"
-        backgroundImg="solar-roof.jpg"
-        leftbuttontext="Order Now"
-        rightbuttontext="Learn More"
-        Path="/solarpanels"
-      /> 
+        title='Solar Roof'
+        Description='Produce Clean Energy From your Roof'
+        backgroundImg='solar-roof.jpg'
+        leftbuttontext='Order Now'
+        rightbuttontext='Learn More'
+        Path='/solarpanels'
+      />
 
       <Section
-        title="Accessories"
-        backgroundImg="accessories.jpg"
-        leftbuttontext="Shop Now"
+        title='Accessories'
+        backgroundImg='accessories.jpg'
+        leftbuttontext='Shop Now'
       />
-      </Route>
-      </Routes>
-      <Footer />
-      </Router>
     </Container>
   );
 }
